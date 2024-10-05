@@ -1,2 +1,12 @@
-test
-C:\Users\Admin\OneDrive - Rajamangala University of Technology Lanna\Work\VOLTA\2567\Ovaltin\Kettybot\NodeJS\client_server_check\server.js
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello from Computer A!\n');
+});
+
+const port = 3000;
+server.listen(port, '0.0.0.0', () => {
+    console.log(`Server running at http://localhost:${port}/`);
+});

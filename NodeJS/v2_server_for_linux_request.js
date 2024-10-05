@@ -3,7 +3,7 @@ const bodyParser = require('body-parser'); // Import middleware to parse incomin
 const axios = require('axios'); // Import Axios for making HTTP requests (to communicate with the robot).
 
 const app = express(); // Initialize the Express app.
-const PORT = 9051;  // Define the port number for the server to listen on.
+const PORT = 3000;  // Define the port number for the server to listen on.
 
 app.use(bodyParser.json());  // Use the body-parser middleware to automatically parse incoming JSON requests.
 
@@ -105,5 +105,5 @@ app.get('/api/robot/status', (req, res) => {
 
 // Start the server and listen on the defined port.
 app.listen(PORT, () => {
-    console.log(`Server running on http://127.0.0.1:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });
